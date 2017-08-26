@@ -9,19 +9,19 @@ namespace mpl_test {
 
 	void mpl_count() {
 		assert_same_type(
-			mpl_custom::count<std::tuple<int, float, int>, int>{},
+			zutils::mpl::count<std::tuple<int, float, int>, int>{},
 			checker_c<2>{}
 		);
 		assert_same_type(
-			mpl_custom::count<mpl_custom::list<int, float, int>, int>{},
+			zutils::mpl::count<zutils::mpl::list<int, float, int>, int>{},
 			checker_c<2>{}
 		);
 		assert_same_type(
-			mpl_custom::count<std::tuple<int>, int>{},
+			zutils::mpl::count<std::tuple<int>, int>{},
 			checker_c<1>{}
 		);
 		assert_same_type(
-			mpl_custom::count<std::tuple<std::vector<int>>, std::vector<int>>{},
+			zutils::mpl::count<std::tuple<std::vector<int>>, std::vector<int>>{},
 			checker_c<1>{}
 		);
 	}

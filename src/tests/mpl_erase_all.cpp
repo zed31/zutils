@@ -4,24 +4,24 @@
 namespace mpl_test {
 	void mpl_erase_all() {
 		assert_same_type(
-			mpl_custom::erase_all<std::tuple<int, int, int, float>, int>{},
+			zutils::mpl::erase_all<std::tuple<int, int, int, float>, int>{},
 			std::tuple<float>{}
 		);
 		assert_same_type(
-			mpl_custom::erase_all<std::tuple<int, int, int>, int>{},
+			zutils::mpl::erase_all<std::tuple<int, int, int>, int>{},
 			std::tuple<>{}
 		);
 		assert_same_type(
-			mpl_custom::erase_all<mpl_custom::list<int, int, int>, int>{},
-			mpl_custom::list<>{}
+			zutils::mpl::erase_all<zutils::mpl::list<int, int, int>, int>{},
+			zutils::mpl::list<>{}
 		);
 		assert_same_type(
-			mpl_custom::erase_all<mpl_custom::list<int, int, int, float>, int>{},
-			mpl_custom::list<float>{}
+			zutils::mpl::erase_all<zutils::mpl::list<int, int, int, float>, int>{},
+			zutils::mpl::list<float>{}
 		);
 		assert_same_type(
-			mpl_custom::erase_all<mpl_custom::list<float, int, int, float>, int>{},
-			mpl_custom::list<float, float>{}
+			zutils::mpl::erase_all<zutils::mpl::list<float, int, int, float>, int>{},
+			zutils::mpl::list<float, float>{}
 		);
 	}
 }

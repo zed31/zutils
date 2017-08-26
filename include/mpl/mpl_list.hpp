@@ -1,6 +1,8 @@
 #pragma once
 
-namespace mpl_custom {
-    template<typename... T>
-	struct list {};
+namespace zutils {
+	namespace mpl {
+		template<typename... T>
+		struct list {};
+	}
 }

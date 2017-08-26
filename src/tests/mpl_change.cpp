@@ -6,20 +6,20 @@
 namespace mpl_test {
 	void test_mpl_change() {
 		assert_same_type(
-			mpl_custom::list<int, char, float>{},
-			mpl_custom::change<std::tuple<int, char, float>, mpl_custom::list>{}
+			zutils::mpl::list<int, char, float>{},
+			zutils::mpl::change<std::tuple<int, char, float>, zutils::mpl::list>{}
 		);
 		assert_same_type(
 			std::tuple<int, char, float>{},
-			mpl_custom::change<mpl_custom::list<int, char, float>, std::tuple>{}
+			zutils::mpl::change<zutils::mpl::list<int, char, float>, std::tuple>{}
 		);
 		assert_same_type(
-			mpl_custom::list<int, char, float>{},
-			mpl_custom::change<std::tuple<int, char, float>, mpl_custom::list>{}
+			zutils::mpl::list<int, char, float>{},
+			zutils::mpl::change<std::tuple<int, char, float>, zutils::mpl::list>{}
 		);
 		assert_same_type(
 			std::vector<int>{},
-			mpl_custom::change<mpl_custom::list<int>, std::vector>{}
+			zutils::mpl::change<zutils::mpl::list<int>, std::vector>{}
 		);
 	}
 }

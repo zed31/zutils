@@ -9,13 +9,13 @@ namespace mpl_test {
 
 	void mpl_contains() {
 		assert_same_type(
-			mpl_custom::contains<std::tuple<int, float>, int>{}, checker_c<true>{}
+			zutils::mpl::contains<std::tuple<int, float>, int>{}, checker_c<true>{}
 		);
 		assert_same_type(
-			mpl_custom::contains<mpl_custom::list<int>, float>{}, checker_c<false>{}
+			zutils::mpl::contains<zutils::mpl::list<int>, float>{}, checker_c<false>{}
 		);
 		assert_same_type(
-			mpl_custom::contains<std::vector<int>, std::allocator<int>>{}, checker_c<true>{}
+			zutils::mpl::contains<std::vector<int>, std::allocator<int>>{}, checker_c<true>{}
 		);
 	}
 }

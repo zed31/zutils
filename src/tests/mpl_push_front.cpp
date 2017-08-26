@@ -5,16 +5,16 @@
 namespace mpl_test {
 	void mpl_push_front() {
 		assert_same_type(
-			mpl_custom::list<double, int, float>{},
-			mpl_custom::push_front<mpl_custom::list<int, float>, double>{}
+			zutils::mpl::list<double, int, float>{},
+			zutils::mpl::push_front<zutils::mpl::list<int, float>, double>{}
 		);
 		assert_same_type(
-			mpl_custom::list<double, unsigned, char, int, float, int, float>{},
-			mpl_custom::push_front<mpl_custom::list<int, float>, double, unsigned, char, int, float>{}
+			zutils::mpl::list<double, unsigned, char, int, float, int, float>{},
+			zutils::mpl::push_front<zutils::mpl::list<int, float>, double, unsigned, char, int, float>{}
 		);
 		assert_same_type(
 			std::tuple<double, char, char, int, float, int, float>{},
-			mpl_custom::push_front<std::tuple<int, float>, double, char, char, int, float>{}
+			zutils::mpl::push_front<std::tuple<int, float>, double, char, char, int, float>{}
 		);
 	}
 }

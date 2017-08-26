@@ -5,25 +5,25 @@ namespace mpl_test {
 	void mpl_at_c() {
 		static_assert(
 			std::is_same<
-				mpl_custom::at_c<std::tuple<int, char, float>, 1>,
+				zutils::mpl::at_c<std::tuple<int, char, float>, 1>,
 				char
 			>::value, ""
 		);
 		static_assert(
 			std::is_same<
-				mpl_custom::at_c<std::tuple<int, char, float>, 2>,
+				zutils::mpl::at_c<std::tuple<int, char, float>, 2>,
 				float
 			>::value, ""
 		);
 		static_assert(
 			std::is_same<
-				mpl_custom::at_c<mpl_custom::list<int, char, float>, 1>,
+				zutils::mpl::at_c<zutils::mpl::list<int, char, float>, 1>,
 				char
 			>::value, ""
 		);
 		static_assert(
 			std::is_same<
-				mpl_custom::at_c<mpl_custom::list<int, char, float>, 0>,
+				zutils::mpl::at_c<zutils::mpl::list<int, char, float>, 0>,
 				int
 			>::value, ""
 		);
