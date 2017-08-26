@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PUSH_FRONT_IMPL_HPP_
+# define PUSH_FRONT_IMPL_HPP_
 
 namespace zutils {
 	namespace mpl {
@@ -14,3 +15,5 @@ namespace zutils {
 		using push_front = typename push_front_impl<container, T...>::type;
 	}
 }
+
+#endif

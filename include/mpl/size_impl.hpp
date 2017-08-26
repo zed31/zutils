@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SIZE_IMPL_HPP_
+# define SIZE_IMPL_HPP_
 
 #include <type_traits>
 
@@ -16,3 +17,5 @@ namespace zutils {
 		using size = typename size_impl<containerSrc>::type;
 	}
 }
+
+#endif

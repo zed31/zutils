@@ -1,4 +1,5 @@
-#pragma once
+#ifndef META_FUNCTION_HPP_
+# define META_FUNCTION_HPP_
 
 namespace zutils {
 	namespace mpl {
@@ -9,3 +10,5 @@ namespace zutils {
 		using add_const_pointer = T const*;
 	}
 }
+
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CHANGE_IMPL_HPP_
+# define CHANGE_IMPL_HPP_
 
 namespace zutils {
 	namespace mpl {
@@ -14,3 +15,5 @@ namespace zutils {
 		using change = typename change_impl<containerSrc, containerDest>::type;
 	}
 }
+
+#endif

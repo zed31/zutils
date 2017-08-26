@@ -1,4 +1,5 @@
-#pragma once
+#ifndef COUNT_IMPL_HPP_
+# define COUNT_IMPL_HPP_
 
 #include <type_traits>
 #include "size_impl.hpp"
@@ -13,3 +14,5 @@ namespace zutils {
 		>::type;
 	}
 }
+
+#endif

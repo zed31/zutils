@@ -1,3 +1,6 @@
+#ifndef MPL_TEST_HPP_
+# define MPL_TEST_HPP_
+
 #include "mpl.hpp"
 
 namespace zutils {
@@ -24,3 +27,5 @@ namespace zutils {
 		}
 	}
 }
+
+#endif

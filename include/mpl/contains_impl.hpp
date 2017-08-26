@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CONTAINS_IMPL_HPP_
+# define CONTAINS_IMPL_HPP_
 
 #include <type_traits>
 
@@ -26,3 +27,5 @@ namespace zutils {
 		using contains = typename contains_impl<container, compareType>::type;
 	}
 }
+
+#endif

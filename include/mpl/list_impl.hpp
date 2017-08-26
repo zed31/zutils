@@ -1,4 +1,5 @@
-#pragma once
+#ifndef LIST_IMPL_HPP_
+# define LIST_IMPL_HPP_
 
 namespace zutils {
 	namespace mpl {
@@ -6,3 +7,5 @@ namespace zutils {
 		struct list {};
 	}
 }
+
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef AT_IMPL_HPP_
+# define AT_IMPL_HPP_
 
 namespace zutils {
 	namespace mpl {
@@ -19,3 +20,5 @@ namespace zutils {
 		using at_c = typename at_impl<container, pos>::type;
 	}
 }
+
+#endif

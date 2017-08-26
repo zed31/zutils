@@ -1,4 +1,5 @@
-#pragma once
+#ifndef NO_DUPLICATES_IMPL_HPP_
+# define NO_DUPLICATES_IMPL_HPP_
 
 #include "erase_all_impl.hpp"
 #include "push_front_impl.hpp"
@@ -24,3 +25,5 @@ namespace zutils {
 		using no_duplicates = typename no_duplicates_impl<container>::type;
 	}
 }
+
+#endif

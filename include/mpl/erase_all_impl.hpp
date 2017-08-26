@@ -1,4 +1,6 @@
-#pragma once
+#ifndef ERASE_ALL_IMPL_HPP_
+# define ERASE_ALL_IMPL_HPP_
+
 #include "push_front_impl.hpp"
 
 namespace zutils {
@@ -26,3 +28,5 @@ namespace zutils {
 		using erase_all = typename erase_all_impl<container, typeErase>::type;
 	}
 }
+
+#endif

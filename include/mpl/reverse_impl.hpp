@@ -1,4 +1,6 @@
-#pragma once
+#ifndef REVERSE_IMPL_HPP_
+# define REVERSE_IMPL_HPP_
+
 #include "push_back_impl.hpp"
 
 namespace zutils {
@@ -21,3 +23,5 @@ namespace zutils {
 		using reverse = typename reverse_impl<container>::type;
 	}
 }
+
+#endif

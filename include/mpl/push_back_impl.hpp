@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PUSH_BACK_IMPL_HPP_
+# define PUSH_BACK_IMPL_HPP_
 
 namespace zutils {
 	namespace mpl {
@@ -14,3 +15,5 @@ namespace zutils {
 		using push_back = typename push_back_impl<container, insert...>::type;
 	}
 }
+
+#endif

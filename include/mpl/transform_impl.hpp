@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TRANSFORM_IMPL_HPP_
+# define TRANSFORM_IMPL_HPP_
 
 namespace zutils {
 	namespace mpl {
@@ -14,3 +15,5 @@ namespace zutils {
 		using transform = typename transform_impl<container, metaFunction>::type;
 	}
 }
+
+#endif
