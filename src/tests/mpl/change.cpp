@@ -1,10 +1,10 @@
 #include <tuple>
 #include <vector>
-#include "proto_test.hh"
+#include "mpl_test.hpp"
 
 namespace zutils {
 	namespace mpl {
-		void test::mpl_change() {
+		void test::change() {
 			assert_same_type(
 				zutils::mpl::list<int, char, float>{},
 				zutils::mpl::change<std::tuple<int, char, float>, zutils::mpl::list>{}

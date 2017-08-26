@@ -1,9 +1,9 @@
 #include <tuple>
-#include "proto_test.hh"
+#include "mpl_test.hpp"
 
 namespace zutils {
 	namespace mpl {
-		void test::mpl_push_back() {
+		void test::push_back() {
 			assert_same_type(
 				zutils::mpl::list<int, float, double>{},
 				zutils::mpl::push_back<zutils::mpl::list<int, float>, double>{}

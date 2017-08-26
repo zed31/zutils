@@ -1,9 +1,9 @@
 #include <tuple>
-#include "proto_test.hh"
+#include "mpl_test.hpp"
 
 namespace zutils {
 	namespace mpl {
-		void test::mpl_reverse() {
+		void test::reverse() {
 			assert_same_type(
 				zutils::mpl::reverse<zutils::mpl::list<int, float, char>>{},
 				zutils::mpl::list<char, float, int>{}

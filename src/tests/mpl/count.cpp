@@ -1,14 +1,14 @@
 #include <type_traits>
 #include <tuple>
 #include <vector>
-#include "proto_test.hh"
+#include "mpl_test.hpp"
 
 namespace zutils {
 	namespace mpl {
 		template<std::size_t value>
 		using checker_c = typename std::integral_constant<std::size_t, value>::type;
 
-		void test::mpl_count() {
+		void test::count() {
 			assert_same_type(
 				zutils::mpl::count<std::tuple<int, float, int>, int>{},
 				checker_c<2>{}

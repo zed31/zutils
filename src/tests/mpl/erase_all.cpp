@@ -1,9 +1,9 @@
 #include <tuple>
-#include "proto_test.hh"
+#include "mpl_test.hpp"
 
 namespace zutils {
 	namespace mpl {
-		void test::mpl_erase_all() {
+		void test::erase_all() {
 			assert_same_type(
 				zutils::mpl::erase_all<std::tuple<int, int, int, float>, int>{},
 				std::tuple<float>{}

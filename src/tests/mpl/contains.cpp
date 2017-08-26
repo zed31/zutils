@@ -1,14 +1,14 @@
 #include <type_traits>
 #include <tuple>
 #include <vector>
-#include "proto_test.hh"
+#include "mpl_test.hpp"
 
 namespace zutils {
 	namespace mpl {
 		template<bool value>
 		using checker_c = std::integral_constant<bool, value>;
 
-		void test::mpl_contains() {
+		void test::contains() {
 			assert_same_type(
 				zutils::mpl::contains<std::tuple<int, float>, int>{}, checker_c<true>{}
 			);

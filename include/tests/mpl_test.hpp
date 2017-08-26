@@ -11,16 +11,16 @@ namespace zutils {
 				type_wrapper<T1>{} = type_wrapper<T2>{};
 			}
 
-			void mpl_change();
-			void mpl_push_back();
-			void mpl_size();
-			void mpl_push_front();
-			void mpl_transform();
-			void mpl_contains();
-			void mpl_at_c();
-			void mpl_count();
-			void mpl_erase_all();
-			void mpl_reverse();
+			void change();
+			void push_back();
+			void size();
+			void push_front();
+			void transform();
+			void contains();
+			void at_c();
+			void count();
+			void erase_all();
+			void reverse();
 		}
 	}
 }

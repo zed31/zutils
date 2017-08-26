@@ -3,14 +3,14 @@
 #include <map>
 #include <type_traits>
 #include <memory>
-#include "proto_test.hh"
+#include "mpl_test.hpp"
 
 namespace zutils {
 	namespace mpl {
 		template<std::size_t value>
 		using checker_c = typename std::integral_constant<std::size_t, value>;
 
-		void test::mpl_size() {
+		void test::size() {
 			assert_same_type(
 				zutils::mpl::size<std::tuple<int, float, char, double*>>{}, checker_c<4>{}
 			);

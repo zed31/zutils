@@ -1,9 +1,9 @@
 #include <tuple> 
-#include "proto_test.hh"
+#include "mpl_test.hpp"
 
 namespace zutils {
 	namespace mpl {
-		void test::mpl_at_c() {
+		void test::at_c() {
 			static_assert(
 				std::is_same<
 					zutils::mpl::at_c<std::tuple<int, char, float>, 1>,
