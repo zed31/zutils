@@ -1,8 +1,8 @@
 #pragma once
 
 #include <type_traits>
-#include "mpl_size.hpp"
-#include "mpl_erase_all.hpp"
+#include "size_impl.hpp"
+#include "erase_all_impl.hpp"
 
 namespace zutils {
 	namespace mpl {

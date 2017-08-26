@@ -1,7 +1,7 @@
 #pragma once
 
-#include "mpl_erase_all.hpp"
-#include "mpl_push_front.hpp"
+#include "erase_all_impl.hpp"
+#include "push_front_impl.hpp"
 
 namespace zutils {
 	namespace mpl {
