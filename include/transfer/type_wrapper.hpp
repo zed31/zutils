@@ -7,6 +7,9 @@ namespace zutils {
 		struct type_wrapper {
 			using type = T;
 		};
+
+		template<typename T>
+		type_wrapper<T> m_type{};
 	}
 }
 
