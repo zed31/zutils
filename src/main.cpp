@@ -1,14 +1,14 @@
 #include "proto_test.hh"
 
 int main() {
-	mpl_test::test_mpl_change();
-	mpl_test::test_mpl_push_back();
-	mpl_test::mpl_size();
-	mpl_test::mpl_push_front();
-	mpl_test::mpl_transform();
-	mpl_test::mpl_contains();
-	mpl_test::mpl_at_c();
-	mpl_test::mpl_count();
-	mpl_test::mpl_erase_all();
-	mpl_test::mpl_reverse();
+	zutils::mpl::test::mpl_change();
+	zutils::mpl::test::mpl_push_back();
+	zutils::mpl::test::mpl_size();
+	zutils::mpl::test::mpl_push_front();
+	zutils::mpl::test::mpl_transform();
+	zutils::mpl::test::mpl_contains();
+	zutils::mpl::test::mpl_at_c();
+	zutils::mpl::test::mpl_count();
+	zutils::mpl::test::mpl_erase_all();
+	zutils::mpl::test::mpl_reverse();
 }
