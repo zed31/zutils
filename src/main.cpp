@@ -1,3 +1,5 @@
+#include <iostream>
+#include "transfer_test.hpp"
 #include "mpl_test.hpp"
 
 int main() {
@@ -11,4 +13,6 @@ int main() {
 	zutils::mpl::test::count();
 	zutils::mpl::test::erase_all();
 	zutils::mpl::test::reverse();
+    zutils::transfer::test::meta_function();
+    std::cout << "All passed" << std::endl;
 }
