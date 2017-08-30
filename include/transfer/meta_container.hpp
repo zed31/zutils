@@ -3,7 +3,7 @@
 
 namespace zutils {
 	namespace transfer {
-		template<template<typename> class f>
+		template<template<typename...> class f>
 		struct meta_container {
 			template<typename... T>
 			using apply = f<T...>;

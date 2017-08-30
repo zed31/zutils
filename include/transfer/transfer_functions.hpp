@@ -11,6 +11,13 @@ namespace zutils {
 				typename f::template apply<typename decltype(t)::type...>::type
 			>;
 		};
+
+        template<template<class...> class f, class... T>
+        auto apply_template(T... t) {
+            return m_type<
+                f<typename decltype(t)::type...>
+            >;
+        };
 	}
 }
 
