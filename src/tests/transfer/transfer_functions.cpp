@@ -14,6 +14,7 @@ struct add_pointer {
 using add_pointer_t = meta_container<add_pointer>;
 
 /* Create bridge between mpl:: and "runtime" */
+
 using add_pointer_meta_t = meta_container<mpl::add_pointer_meta>;
 
 /* Create wrapper for std::integral_constant */

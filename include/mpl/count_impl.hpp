@@ -6,21 +6,25 @@
 #include "erase_all_impl.hpp"
 
 namespace zutils {
-	namespace mpl {
-		template<class container, class typeOccur>
-		using count = typename std::integral_constant<
-			std::size_t, 
-			size<container>::value - size<erase_all<container, typeOccur>>::value
-		>::type;
 
-        template<typename container, typename typeOccur>
-        struct count_transfer {
-            using type = typename std::integral_constant<
-                    std::size_t,
-                    size<container>::value - size<erase_all<container, typeOccur>>::value
-            >;
-        };
-	}
+namespace mpl {
+
+template<class container, class typeOccur>
+using count = typename std::integral_constant<
+	std::size_t,
+	size<container>::value - size<erase_all<container, typeOccur>>::value
+>::type;
+
+template<typename container, typename typeOccur>
+struct count_transfer {
+	using type = typename std::integral_constant<
+		std::size_t,
+		size<container>::value - size<erase_all<container, typeOccur>>::value
+	>;
+};
+
+}
+
 }
 
 #endif

@@ -2,15 +2,19 @@
 # define TYPE_WRAPPER_HPP_
 
 namespace zutils {
-	namespace transfer {
-		template<typename T>
-		struct type_wrapper {
-			using type = T;
-		};
 
-		template<typename T>
-		type_wrapper<T> m_type{};
-	}
+namespace transfer {
+
+template<typename T>
+struct type_wrapper {
+    using type = T;
+};
+
+template<typename T>
+type_wrapper<T> m_type{};
+
+}
+
 }
 
 #endif

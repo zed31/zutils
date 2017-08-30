@@ -7,14 +7,19 @@
 #include "transfer_functions.hpp"
 
 namespace zutils {
-	namespace transfer {
-		namespace test {
-			template<typename T>
-			void assert_same_type(T, T) {};
-			
-			void meta_function();
-		}
-	}
+
+namespace transfer {
+
+namespace test {
+template<typename T>
+void assert_same_type(T, T) {};
+
+void meta_function();
+
+}
+
+}
+
 }
 
 #endif
