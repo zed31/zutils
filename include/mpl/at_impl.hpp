@@ -23,7 +23,7 @@ using at_c = typename at_impl<container, pos>::type;
 
 template<typename container, unsigned pos>
 struct at_transfer_c {
-	using type = at_c_impl<container, pos>::type;
+	using type = typename at_impl<container, pos>::type;
 };
 
 }// End mpl
