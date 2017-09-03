@@ -1,3 +1,4 @@
+#include <tuple>
 #include "mpl.hpp"
 #include "transfer_test.hpp"
 
@@ -9,7 +10,7 @@ namespace test {
 /* Creating type transfer */
 template<typename T>
 struct add_pointer {
-	using type = T*;
+  using type = T *;
 };
 using add_pointer_t = meta_container<add_pointer>;
 
@@ -23,23 +24,24 @@ using constant_wrapper = std::integral_constant<std::size_t, value>;
 
 /* Test for type_wrapper<T> meta_container<f> and metafunction */
 void meta_function() {
-	/* Test meta_container */
-	int *i{};
-	assert_same_type(add_pointer_t::apply<int>::type{}, decltype(m_type<int *>)::type{});
-	assert_same_type(add_pointer_t::apply<int>::type{}, i);
+  /* Test meta_container */
+  int *i{};
+  assert_same_type(add_pointer_t::apply<int>::type{}, decltype(m_type<int *>)::type{});
+  assert_same_type(add_pointer_t::apply<int>::type{}, i);
 
-	/* test meta_function */
-	auto meta_f_result = apply_meta_function<add_pointer_t>(m_type<int>);
-	assert_same_type(meta_f_result, m_type<int *>);
+  /* test meta_function */
+  auto meta_f_result = apply_meta_function<add_pointer_t>(m_type<int>);
+  assert_same_type(meta_f_result, m_type<int *>);
 
-    /* test template_meta_function */
-	auto template_f_result = apply_template<mpl::list>(m_type<int>, m_type<char>, m_type<float>);
-	assert_same_type(decltype(template_f_result)::type{}, mpl::list<int, char, float>{});
+  /* test template_meta_function */
+  auto template_f_result = apply_template<mpl::list>(m_type<int>, m_type<char>, m_type<float>);
+  assert_same_type(decltype(template_f_result)
+  ::type{}, mpl::list<int, char, float>{});
 
-    /* Mixin with mpl:: library */
-	using count_transfer = meta_container<mpl::count_transfer>;
-	auto meta_f_count = apply_meta_function<count_transfer>(m_type<std::tuple<int, char, float>>, m_type<int>);
-	assert_same_type(decltype(meta_f_count)::type{}, constant_wrapper<1>{});
+  /* Mixin with mpl:: library */
+  using count_transfer = meta_container<mpl::count_transfer>;
+  auto meta_f_count = apply_meta_function<count_transfer>(m_type<std::tuple<int, char, float>>, m_type<int>);
+  assert_same_type(decltype(meta_f_count)::type{}, constant_wrapper<1>{});
 }
 
 } // End namespace test
