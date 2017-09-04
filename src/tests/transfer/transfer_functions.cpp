@@ -35,8 +35,7 @@ void meta_function() {
 
   /* test template_meta_function */
   auto template_f_result = apply_template<mpl::list>(m_type<int>, m_type<char>, m_type<float>);
-  assert_same_type(decltype(template_f_result)
-  ::type{}, mpl::list<int, char, float>{});
+  assert_same_type(decltype(template_f_result)::type{}, mpl::list<int, char, float>{});
 
   /* Mixin with mpl:: library */
   using count_transfer = meta_container<mpl::count_transfer>;
