@@ -12,7 +12,7 @@ template<typename T>
 static void display_matrix(zutils::eval::Matrix<T> const& m) {
   for (size_type_t j = 0; j < m.height(); ++j) {
     for (size_type_t i = 0; i < m.width(); ++i) {
-      std::cout << " " << m(j, i);
+      std::cout << " " << m(i, j);
     }
     std::cout << std::endl;
   }
@@ -22,7 +22,7 @@ template<typename T, typename Function>
 static void matrix_foreach(zutils::eval::Matrix<T>& m, Function &&f) {
   for (size_type_t j = 0; j < m.height(); ++j) {
     for (size_type_t i = 0; i < m.width(); ++i) {
-      f(m(j, i));
+      f(m(i, j));
     }
   }
 };
@@ -42,6 +42,9 @@ void matrix() {
   zutils::eval::Matrix<int> m2(3, 3, 2);
   matrix_foreach(m2, [](auto &c) { assert(c == 2 && "Value m2(j, i) is not correctly set"); });
   display_matrix(m2);
+  std::cout << "------------------------" << std::endl;
+  zutils::eval::Matrix<int> m3(2, 3);
+  display_matrix(m3);
 }
 
 } // END namespace test

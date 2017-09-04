@@ -1,6 +1,7 @@
 #ifndef ZUTILS_MATRIX_HPP
 #define ZUTILS_MATRIX_HPP
 
+#include <iostream>
 #include <vector>
 #include <cassert>
 
