@@ -27,6 +27,7 @@ void at_c();
 void count();
 void erase_all();
 void reverse();
+void join();
 
 }
 

@@ -13,3 +13,4 @@
 #include "erase_all_impl.hpp"
 #include "reverse_impl.hpp"
 #include "no_duplicates_impl.hpp"
+#include "join_impl.hpp"
