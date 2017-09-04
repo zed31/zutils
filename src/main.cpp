@@ -1,6 +1,7 @@
 #include <iostream>
 #include "transfer_test.hpp"
 #include "mpl_test.hpp"
+#include "matrix_test.hpp"
 
 int main() {
   zutils::mpl::test::change();
@@ -15,5 +16,6 @@ int main() {
   zutils::mpl::test::reverse();
   zutils::mpl::test::join();
   zutils::transfer::test::meta_function();
+  zutils::eval::test::matrix();
   std::cout << "All passed" << std::endl;
 }
