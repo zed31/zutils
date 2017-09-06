@@ -22,8 +22,8 @@ public:
   Matrix &operator=(Matrix&& m) noexcept      = default;
 
   /* Overloaded operators */
-  T &operator()(size_type_t width, size_type_t height);
-  T const &operator()(size_type_t width, size_type_t height) const;
+  T &operator()(size_type_t height, size_type_t width);
+  T const &operator()(size_type_t height, size_type_t width) const;
 
   /* Getter for width and height */
   inline size_type_t height() const;
@@ -39,13 +39,13 @@ Matrix<T>::Matrix(size_type_t height, size_type_t width, T const& t) noexcept
     : m_width{ width }, m_height{ height }, m_data( width * height, t ) {}
 
 template<typename T>
-T &Matrix<T>::operator()(size_type_t width, size_type_t height) {
+T &Matrix<T>::operator()(size_type_t height, size_type_t width) {
   assert(width < m_width && height < m_height && "Matrix<T>: Index out of bound");
   return m_data[height * m_width + width];
 }
 
 template<typename T>
-T const &Matrix<T>::operator()(size_type_t width, size_type_t height) const {
+T const &Matrix<T>::operator()(size_type_t height, size_type_t width) const {
   assert(width < m_width && height < m_height && "Matrix<T>: Index out of bound");
   return m_data[height * m_width + width];
 }
