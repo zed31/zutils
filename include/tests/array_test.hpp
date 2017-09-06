@@ -1,8 +1,14 @@
-//
-// Created by Clément François on 06/09/2017.
-//
-
 #ifndef ZUTILS_ARRAY_TEST_HPP
 #define ZUTILS_ARRAY_TEST_HPP
+
+namespace zutils {
+
+namespace test {
+
+void array();
+
+}
+
+}
 
 #endif //ZUTILS_ARRAY_TEST_HPP
