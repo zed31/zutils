@@ -11,9 +11,11 @@ configuration:
 
 install:
     - git submodule update --init --recursive
+    - set PATH="C:\Program Files\LLVM\bin";%PATH%
+    - clang-cl -v
 
 before_build:
-    - cmake -G "Visual Studio 15 2017 Win64" .
+    - cmake -G "Visual Studio 15 2017 Win64" -DCMAKE_CXX_COMPILER=clang-cl .
 
 build:
   project: $(APPVEYOR_BUILD_FOLDER)\$(APPVEYOR_PROJECT_NAME).sln
