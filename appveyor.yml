@@ -14,8 +14,9 @@ install:
     - set PATH="C:\Program Files\LLVM\bin";%PATH%
     - clang-cl -v
 
-before_build:
-    - cmake -G "Visual Studio 15 2017 Win64" -DCMAKE_CXX_COMPILER=clang-cl .
 
-build:
-  project: $(APPVEYOR_BUILD_FOLDER)\$(APPVEYOR_PROJECT_NAME).sln
+before_build:
+  - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat" amd64
+
+build_script:
+  - cmake -DCMAKE_CXX_COMPILER=clang-cl .
